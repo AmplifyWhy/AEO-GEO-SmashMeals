@@ -16,11 +16,7 @@ your-repo/
 │   ├── llms-ctx.txt                    → https://www.smashmeals.com/llms-ctx.txt
 │   ├── robots.txt                      → https://www.smashmeals.com/robots.txt
 │   ├── sitemap.xml                     → https://www.smashmeals.com/sitemap.xml
-│   ├── agent-layer.jsonld              → https://www.smashmeals.com/agent-layer.jsonld
-│   └── .well-known/
-│       ├── agent-card.json             → https://www.smashmeals.com/.well-known/agent-card.json
-│       ├── mcp-tools.json              → https://www.smashmeals.com/.well-known/mcp-tools.json
-│       └── security.txt               → https://www.smashmeals.com/.well-known/security.txt
+│   └── agent-layer.jsonld              → https://www.smashmeals.com/agent-layer.jsonld
 ```
 
 **Do not deploy** `agent-layer-gaps.json` or `README.md` — those are internal only.
@@ -85,14 +81,31 @@ Combined JSON-LD structured data (Organization + Menu + Products + FAQ + Potenti
 ```
 Google and Bing parse inline JSON-LD more reliably than linked files.
 
+---
+
+## Future agent integrations (optional, deploy when ready)
+
+These files are placeholders for capabilities that don't require anything from your site today. Deploying them now reserves the right locations and signals to AI platforms that agent integrations are planned. Nothing will break if an AI tries to use them — it will simply find no active endpoint.
+
+When you're ready to connect a live AI agent or booking/ordering integration, these files will be updated with real endpoint URLs.
+
+```
+your-repo/
+└── public/
+    └── .well-known/
+        ├── agent-card.json             → https://www.smashmeals.com/.well-known/agent-card.json
+        ├── mcp-tools.json              → https://www.smashmeals.com/.well-known/mcp-tools.json
+        └── security.txt               → https://www.smashmeals.com/.well-known/security.txt
+```
+
 ### `.well-known/agent-card.json`
-A2A (Agent-to-Agent) capability manifest — a static declaration of what the business supports. No backend required. Deploy as-is.
+Declares what AI agents are allowed to do with this business. Currently a placeholder. No changes needed to deploy.
 
 ### `.well-known/mcp-tools.json`
-MCP (Model Context Protocol) tool catalog. These are forward-looking declarations; no live API is required to deploy this file. It signals intent to AI systems and positions the site for future agent integrations. Deploy as-is.
+Lists tools an AI assistant could invoke (e.g., check menu, get hours). Currently a placeholder. No changes needed to deploy.
 
 ### `.well-known/security.txt`
-Security contact information per [RFC 9116](https://www.rfc-editor.org/rfc/rfc9116). Deploy as-is.
+Security contact information per [RFC 9116](https://www.rfc-editor.org/rfc/rfc9116). This one is complete and accurate — deploy as-is.
 
 ---
 
