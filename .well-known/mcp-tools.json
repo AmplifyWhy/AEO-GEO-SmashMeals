@@ -1,0 +1,1095 @@
+{
+  "protocolVersion": "2025-11-25",
+  "serverInfo": {
+    "name": "SmashMeals Agent Layer",
+    "version": "2026-04-20"
+  },
+  "tools": [
+    {
+      "name": "search-catalog",
+      "title": "Search Catalog",
+      "description": "Search the merchant catalog by free-text query and optional category.",
+      "inputSchema": {
+        "description": "Input for search-catalog.",
+        "properties": {
+          "query": {
+            "description": "Search terms",
+            "title": "Query",
+            "type": "string"
+          },
+          "category": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Optional category filter",
+            "title": "Category"
+          },
+          "limit": {
+            "default": 20,
+            "maximum": 100,
+            "minimum": 1,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "SearchCatalogInput",
+        "type": "object"
+      },
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true
+      },
+      "outputSchema": {
+        "$defs": {
+          "CatalogItem": {
+            "properties": {
+              "id": {
+                "title": "Id",
+                "type": "string"
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "description": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Description"
+              },
+              "price_cents": {
+                "title": "Price Cents",
+                "type": "integer"
+              },
+              "price_currency": {
+                "default": "USD",
+                "title": "Price Currency",
+                "type": "string"
+              },
+              "category": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Category"
+              },
+              "image_url": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Image Url"
+              },
+              "url": {
+                "title": "Url",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "price_cents",
+              "url"
+            ],
+            "title": "CatalogItem",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/CatalogItem"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "total_count": {
+            "title": "Total Count",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "items",
+          "total_count"
+        ],
+        "title": "SearchCatalogOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "get-product",
+      "title": "Get Product",
+      "description": "Fetch full details for a single product by id.",
+      "inputSchema": {
+        "properties": {
+          "product_id": {
+            "title": "Product Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "product_id"
+        ],
+        "title": "GetProductInput",
+        "type": "object"
+      },
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true
+      },
+      "outputSchema": {
+        "$defs": {
+          "CatalogItem": {
+            "properties": {
+              "id": {
+                "title": "Id",
+                "type": "string"
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "description": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Description"
+              },
+              "price_cents": {
+                "title": "Price Cents",
+                "type": "integer"
+              },
+              "price_currency": {
+                "default": "USD",
+                "title": "Price Currency",
+                "type": "string"
+              },
+              "category": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Category"
+              },
+              "image_url": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Image Url"
+              },
+              "url": {
+                "title": "Url",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "price_cents",
+              "url"
+            ],
+            "title": "CatalogItem",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "item": {
+            "$ref": "#/$defs/CatalogItem"
+          },
+          "nutrition": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nutrition"
+          },
+          "allergens": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Allergens",
+            "type": "array"
+          }
+        },
+        "required": [
+          "item"
+        ],
+        "title": "GetProductOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "search-menu",
+      "title": "Search Menu",
+      "description": "Search menu items with dietary, nutrition, and price constraints.",
+      "inputSchema": {
+        "properties": {
+          "query": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Optional free-text query",
+            "title": "Query"
+          },
+          "dietary_filter": {
+            "description": "e.g., VeganDiet, GlutenFreeDiet, LowFatDiet",
+            "items": {
+              "type": "string"
+            },
+            "title": "Dietary Filter",
+            "type": "array"
+          },
+          "max_calories": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Calories"
+          },
+          "min_protein_g": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min Protein G"
+          }
+        },
+        "title": "SearchMenuInput",
+        "type": "object"
+      },
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true
+      },
+      "outputSchema": {
+        "$defs": {
+          "MenuItemSummary": {
+            "properties": {
+              "id": {
+                "title": "Id",
+                "type": "string"
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "description": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Description"
+              },
+              "price_cents": {
+                "title": "Price Cents",
+                "type": "integer"
+              },
+              "price_currency": {
+                "default": "USD",
+                "title": "Price Currency",
+                "type": "string"
+              },
+              "calories": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Calories"
+              },
+              "protein_g": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Protein G"
+              },
+              "carbs_g": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Carbs G"
+              },
+              "fat_g": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Fat G"
+              },
+              "allergens": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Allergens",
+                "type": "array"
+              },
+              "suitable_for_diet": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Suitable For Diet",
+                "type": "array"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "price_cents"
+            ],
+            "title": "MenuItemSummary",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/$defs/MenuItemSummary"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "total_count": {
+            "title": "Total Count",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "items",
+          "total_count"
+        ],
+        "title": "SearchMenuOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "get-menu-item",
+      "title": "Get Menu Item",
+      "description": "Fetch full details for a single menu item, including nutrition and allergens.",
+      "inputSchema": {
+        "properties": {
+          "item_id": {
+            "title": "Item Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "item_id"
+        ],
+        "title": "GetMenuItemInput",
+        "type": "object"
+      },
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true
+      },
+      "outputSchema": {
+        "$defs": {
+          "MenuItemSummary": {
+            "properties": {
+              "id": {
+                "title": "Id",
+                "type": "string"
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              },
+              "description": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Description"
+              },
+              "price_cents": {
+                "title": "Price Cents",
+                "type": "integer"
+              },
+              "price_currency": {
+                "default": "USD",
+                "title": "Price Currency",
+                "type": "string"
+              },
+              "calories": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Calories"
+              },
+              "protein_g": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Protein G"
+              },
+              "carbs_g": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Carbs G"
+              },
+              "fat_g": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "title": "Fat G"
+              },
+              "allergens": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Allergens",
+                "type": "array"
+              },
+              "suitable_for_diet": {
+                "items": {
+                  "type": "string"
+                },
+                "title": "Suitable For Diet",
+                "type": "array"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "price_cents"
+            ],
+            "title": "MenuItemSummary",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "item": {
+            "$ref": "#/$defs/MenuItemSummary"
+          }
+        },
+        "required": [
+          "item"
+        ],
+        "title": "GetMenuItemOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "calculate-shipping",
+      "title": "Calculate Shipping",
+      "description": "Quote shipping rates for a destination address and optional cart.",
+      "inputSchema": {
+        "$defs": {
+          "Address": {
+            "properties": {
+              "street": {
+                "title": "Street",
+                "type": "string"
+              },
+              "city": {
+                "title": "City",
+                "type": "string"
+              },
+              "region": {
+                "title": "Region",
+                "type": "string"
+              },
+              "postal_code": {
+                "title": "Postal Code",
+                "type": "string"
+              },
+              "country": {
+                "default": "US",
+                "title": "Country",
+                "type": "string"
+              }
+            },
+            "required": [
+              "street",
+              "city",
+              "region",
+              "postal_code"
+            ],
+            "title": "Address",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "destination": {
+            "$ref": "#/$defs/Address"
+          },
+          "cart_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cart Id"
+          },
+          "total_weight_g": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total Weight G"
+          }
+        },
+        "required": [
+          "destination"
+        ],
+        "title": "CalculateShippingInput",
+        "type": "object"
+      },
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true
+      },
+      "outputSchema": {
+        "$defs": {
+          "ShippingQuote": {
+            "properties": {
+              "label": {
+                "title": "Label",
+                "type": "string"
+              },
+              "price_cents": {
+                "title": "Price Cents",
+                "type": "integer"
+              },
+              "currency": {
+                "default": "USD",
+                "title": "Currency",
+                "type": "string"
+              },
+              "min_days": {
+                "title": "Min Days",
+                "type": "integer"
+              },
+              "max_days": {
+                "title": "Max Days",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "label",
+              "price_cents",
+              "min_days",
+              "max_days"
+            ],
+            "title": "ShippingQuote",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "quotes": {
+            "items": {
+              "$ref": "#/$defs/ShippingQuote"
+            },
+            "title": "Quotes",
+            "type": "array"
+          }
+        },
+        "required": [
+          "quotes"
+        ],
+        "title": "CalculateShippingOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "check-delivery-area",
+      "title": "Check Delivery Area",
+      "description": "Check whether the business delivers to a given postal code.",
+      "inputSchema": {
+        "properties": {
+          "postal_code": {
+            "title": "Postal Code",
+            "type": "string"
+          },
+          "country": {
+            "default": "US",
+            "title": "Country",
+            "type": "string"
+          }
+        },
+        "required": [
+          "postal_code"
+        ],
+        "title": "CheckDeliveryAreaInput",
+        "type": "object"
+      },
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true
+      },
+      "outputSchema": {
+        "properties": {
+          "deliverable": {
+            "title": "Deliverable",
+            "type": "boolean"
+          },
+          "service_class": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Service Class"
+          }
+        },
+        "required": [
+          "deliverable"
+        ],
+        "title": "CheckDeliveryAreaOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "subscribe",
+      "title": "Subscribe",
+      "description": "Start a recurring subscription in an advertised tier.",
+      "inputSchema": {
+        "$defs": {
+          "Address": {
+            "properties": {
+              "street": {
+                "title": "Street",
+                "type": "string"
+              },
+              "city": {
+                "title": "City",
+                "type": "string"
+              },
+              "region": {
+                "title": "Region",
+                "type": "string"
+              },
+              "postal_code": {
+                "title": "Postal Code",
+                "type": "string"
+              },
+              "country": {
+                "default": "US",
+                "title": "Country",
+                "type": "string"
+              }
+            },
+            "required": [
+              "street",
+              "city",
+              "region",
+              "postal_code"
+            ],
+            "title": "Address",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "tier_id": {
+            "title": "Tier Id",
+            "type": "string"
+          },
+          "buyer_email": {
+            "title": "Buyer Email",
+            "type": "string"
+          },
+          "shipping_address": {
+            "$ref": "#/$defs/Address"
+          },
+          "payment_token": {
+            "title": "Payment Token",
+            "type": "string"
+          },
+          "start_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "RFC 3339 date; default = next eligible",
+            "title": "Start Date"
+          }
+        },
+        "required": [
+          "tier_id",
+          "buyer_email",
+          "shipping_address",
+          "payment_token"
+        ],
+        "title": "SubscribeInput",
+        "type": "object"
+      },
+      "annotations": {
+        "destructiveHint": true,
+        "openWorldHint": true,
+        "readOnlyHint": false
+      },
+      "outputSchema": {
+        "properties": {
+          "subscription_id": {
+            "title": "Subscription Id",
+            "type": "string"
+          },
+          "tier_id": {
+            "title": "Tier Id",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "active",
+              "paused",
+              "canceled",
+              "failed"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "next_billing_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Billing Date"
+          }
+        },
+        "required": [
+          "subscription_id",
+          "tier_id",
+          "status"
+        ],
+        "title": "SubscriptionOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "get-subscription",
+      "title": "Get Subscription",
+      "description": "Fetch the current state of a subscription.",
+      "inputSchema": {
+        "properties": {
+          "subscription_id": {
+            "title": "Subscription Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "subscription_id"
+        ],
+        "title": "GetSubscriptionInput",
+        "type": "object"
+      },
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true
+      },
+      "outputSchema": {
+        "properties": {
+          "subscription_id": {
+            "title": "Subscription Id",
+            "type": "string"
+          },
+          "tier_id": {
+            "title": "Tier Id",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "active",
+              "paused",
+              "canceled",
+              "failed"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "next_billing_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Billing Date"
+          }
+        },
+        "required": [
+          "subscription_id",
+          "tier_id",
+          "status"
+        ],
+        "title": "SubscriptionOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "pause-subscription",
+      "title": "Pause Subscription",
+      "description": "Pause an active subscription, optionally until a resume date.",
+      "inputSchema": {
+        "properties": {
+          "subscription_id": {
+            "title": "Subscription Id",
+            "type": "string"
+          },
+          "resume_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "RFC 3339 date",
+            "title": "Resume At"
+          }
+        },
+        "required": [
+          "subscription_id"
+        ],
+        "title": "PauseSubscriptionInput",
+        "type": "object"
+      },
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false
+      },
+      "outputSchema": {
+        "properties": {
+          "subscription_id": {
+            "title": "Subscription Id",
+            "type": "string"
+          },
+          "tier_id": {
+            "title": "Tier Id",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "active",
+              "paused",
+              "canceled",
+              "failed"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "next_billing_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Billing Date"
+          }
+        },
+        "required": [
+          "subscription_id",
+          "tier_id",
+          "status"
+        ],
+        "title": "SubscriptionOutput",
+        "type": "object"
+      }
+    },
+    {
+      "name": "cancel-subscription",
+      "title": "Cancel Subscription",
+      "description": "Cancel a subscription, optionally effective on a future date.",
+      "inputSchema": {
+        "properties": {
+          "subscription_id": {
+            "title": "Subscription Id",
+            "type": "string"
+          },
+          "effective_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "RFC 3339 date",
+            "title": "Effective At"
+          }
+        },
+        "required": [
+          "subscription_id"
+        ],
+        "title": "CancelSubscriptionInput",
+        "type": "object"
+      },
+      "annotations": {
+        "destructiveHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false
+      },
+      "outputSchema": {
+        "properties": {
+          "subscription_id": {
+            "title": "Subscription Id",
+            "type": "string"
+          },
+          "tier_id": {
+            "title": "Tier Id",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "active",
+              "paused",
+              "canceled",
+              "failed"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "next_billing_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Billing Date"
+          }
+        },
+        "required": [
+          "subscription_id",
+          "tier_id",
+          "status"
+        ],
+        "title": "SubscriptionOutput",
+        "type": "object"
+      }
+    }
+  ]
+}

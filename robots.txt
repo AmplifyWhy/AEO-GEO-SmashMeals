@@ -1,0 +1,115 @@
+User-agent: GPTBot
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: AppleBot-Extended
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: CCBot
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: Diffbot
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+User-agent: *
+Allow: /.well-known/
+Allow: /llms.txt
+Allow: /sitemap.xml
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.env
+Disallow: /.git/
+
+Sitemap: https://www.smashmeals.com/sitemap.xml

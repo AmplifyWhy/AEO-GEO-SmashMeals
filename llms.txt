@@ -1,0 +1,17 @@
+# SmashMeals
+
+> SmashMeals provides 100% gluten-free meal prep delivery, offering fresh, chef-crafted meals delivered weekly in the Tri-Cities area.
+
+## Menu
+- [Menu](https://www.smashmeals.com/menu): current rotation and nutrition info
+
+## Agent endpoints
+- [Agent Card](https://www.smashmeals.com/.well-known/agent-card.json): A2A capability manifest
+- [UCP profile](https://www.smashmeals.com/.well-known/ucp): Universal Commerce Protocol profile
+- [ACP profile](https://www.smashmeals.com/.well-known/acp.json): Agentic Commerce Protocol capabilities
+
+## Contact
+- [Home](https://www.smashmeals.com/): hours, location, contact info
+
+## Optional
+- [FAQs](https://www.smashmeals.com/#faq): frequently asked questions

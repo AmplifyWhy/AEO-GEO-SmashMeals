@@ -1,0 +1,3 @@
+Contact: lew@smashmeals.com
+Expires: 2027-04-23T22:54:45Z
+Canonical: https://www.smashmeals.com/.well-known/security.txt

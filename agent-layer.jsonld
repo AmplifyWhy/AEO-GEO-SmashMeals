@@ -1,0 +1,1152 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FoodEstablishment",
+      "@id": "https://www.smashmeals.com/#business",
+      "name": "SmashMeals",
+      "url": "https://www.smashmeals.com/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1917 Meadowview Pkwy, Suite 100",
+        "addressLocality": "Kingsport",
+        "addressRegion": "TN",
+        "postalCode": "37660",
+        "addressCountry": "US"
+      },
+      "description": "SmashMeals provides 100% gluten-free meal prep delivery, offering fresh, chef-crafted meals delivered weekly in the Tri-Cities area.",
+      "telephone": "+1 423-525-2489",
+      "email": "lew@smashmeals.com",
+      "sameAs": [
+        "https://maps.google.com/?cid=11088171920131301026",
+        "https://www.instagram.com/smash_meals/",
+        "https://www.facebook.com/smashmeals/"
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "36.5050282",
+        "longitude": "-82.566627"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Sunday"
+          ],
+          "opens": "14:00",
+          "closes": "15:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday"
+          ],
+          "opens": "14:00",
+          "closes": "15:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": 126,
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "potentialAction": [
+        {
+          "@type": "SubscribeAction",
+          "name": "Subscribe to a meal plan",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.smashmeals.com/subscribe",
+            "httpMethod": "POST",
+            "contentType": "application/json"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Menu",
+      "@id": "https://www.smashmeals.com/#menu",
+      "name": "Menu",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "A la Carte/Bulk Menu",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/91167",
+              "name": "Steamed Carrots",
+              "description": "4oz",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1744995287.4919806_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "4.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/18653",
+              "name": "Burger (4 oz. cooked)",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/ets5gmvcj9dvydpauv7p.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "4.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/18426",
+              "name": "4 oz. steamed broccoli",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/oumc7657dzuewzyvh7ox.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "3.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/48488",
+              "name": "5 oz. Scrambled Eggs",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1727468354.3863752_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "4.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/31343",
+              "name": "Roasted Brussel Sprouts",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/tvdqfdt8sxq6fe6zvrpa.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "3.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/22553",
+              "name": "Grilled Chicken Tenders (4 oz)",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/zajbykc6gdmchtxugvgu.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "4.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/35074",
+              "name": "Hard Boiled Eggs",
+              "description": "3 hard boiled eggs ",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/dofodbksqjvnplmorkyo.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "4.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/22556",
+              "name": "Sauteed Zucchini (4oz)",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/io8qgvy02v8arh4amos0.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "3.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/18425",
+              "name": "4 oz. steamed green beans",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "3.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/48487",
+              "name": "5 oz. scrambled egg whites",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1727468374.2839868_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "3.50",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/102734",
+              "name": "Butter Nut Squash 4oz",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "4.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/102723",
+              "name": "Roasted Russet Potatoes 4oz",
+              "description": "Diced Russet potatoes roasted to perfection ",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "4.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/102733",
+              "name": "Apple Wood Smoked Bacon 4 Slices",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "4.75",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/91168",
+              "name": "Roasted sweet potatoes 4oz",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1744995241.831544_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "4.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/91169",
+              "name": "Toasted Corn",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1744995270.537371_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "4.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Bariatric or Low Carb Portions",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/103753",
+              "name": "Bariatric friendly Cinnamon Protein Egg Soufflé Cup",
+              "description": "Cinnamon Protein Egg Soufflé Cup\nA warm, fluffy, lightly sweet soufflé-style cup made from egg whites, vanilla protein, and a touch of cinnamon. Soft, airy, and extremely easy to tolerate — perfect for early bariatric stages or anyone wanting a gentle, high-protein morning meal.\nPortion (Single Serving)\n4 oz egg whites\n½ scoop vanilla whey isolate\n1 oz unsweetened almond milk\nCinnamon: ¼ teaspoon\nPinch of salt\n⭐ Macros (Single Serving)\n~170 calories\n26g protein\n3g carbs\n2g fat",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1768501609.3173716_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "6.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/107369",
+              "name": "Smoked Brisket & Egg Scramble (low carb)",
+              "description": "Slow-smoked brisket folded into buttery scrambled eggs for a rich, protein-packed carnivore breakfast. Smoky, savory, and incredibly satisfying.\nCalories: 340\nProtein: 31 g\nFat: 22 g\nCarbs: 1 g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1774033574.5983038_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "8.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/103754",
+              "name": "Bariatric friendly Strawberry Protein Cheesecake Bite",
+              "description": "Bariatric Snack: Strawberry Protein Cheesecake Bite\nA smooth, lightly sweet cheesecake-style bite made with Greek yogurt, protein powder, and real strawberries. Soft, creamy, and portion-controlled so bariatric patients can enjoy a snack without blowing their numbers.\nPortion (Single Bite)\n1.5 oz plain nonfat Greek yogurt\n¼ scoop vanilla whey isolate\n½ oz reduced-fat cream cheese\n1 tbsp finely diced strawberries\nA few drops sugar-free vanilla\nin a 3 oz cup.\n⭐ Macros (Single Bite)\n~90 calories\n12g protein\n4g carbs\n2g fat",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1768501537.6351628_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "3.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Breakfast",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/23001",
+              "name": "Uncle Tommy's Breakfast Casserole",
+              "description": "Cals: 312, Protein: 17g, Fat: 22g, Carbs: 9g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1719600532.4865904_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "8.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13722",
+              "name": "Berry Oatmeal Bake with scrambled eggs of your choice",
+              "description": "Berry Oatmeal Bake with scrambled egg whites ",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/vp3qbeqfdbg49bfofyqf.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "8.75",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13051",
+              "name": "Berry Oatmeal Bake",
+              "description": "Cals: 283, Protein: 11g, Carbs: 50g, Fat: 4g\r\n\r\n",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/gtnmksbt2pz6zvujfrov.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "8.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13070",
+              "name": "Dairy Free Sausage and Egg White Omelet",
+              "description": "Calories: 255 kcal\n\nProtein: 25g\n\nFat: 14g\n\nCarbs: 1g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/rr9scextjhtdjq2nnonw.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "8.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13111",
+              "name": "Sausage & Mozzarella Quiche",
+              "description": "Cals: 403, Protein: 27g, Fat: 31g, Carbs: 11g ",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1769478678.6964157_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "8.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13058",
+              "name": "Egg White and Bacon Omelet",
+              "description": "Keto, Low Carb, Paleo, Whole 30\n\nCalories: 132, Protein: 20g , Fat: 4g,  Carbs: 0g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1744995162.0148478_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "8.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Entrees",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13131",
+              "name": "Buffalo Chicken Alfredo Bake",
+              "description": "Chicken, Broccoli baked with cream cheese, buffalo sauce and ranch powder. \n*Best Seller*\nKeto/Low Carb \nCalories: 510 Protein: 40g Fat: 34g Carbs: 10g\nDouble Protein \nCalories: 510 Protein: 40 g\nFat: 34 g Carbs: 10 g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1728064479.3075569_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "10.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/95143",
+              "name": "Garlic Herb Filet Mignon Plate, Roasted Brussels, and Choice of Mashed Potato or Cauliflower",
+              "description": "Premium filet mignon seasoned with garlic and fresh herbs, grilled for rich flavor and tenderness. Served with roasted Brussels sprouts and your choice of creamy mashed potatoes or mashed cauliflower for a balanced, high-protein meal that feels indulgent while staying nutritious.\n\nwith Mashed Potatoes Calories 495 Protein 42g\nCarbs 22g Fat 27g\n\nwith Mashed Cauliflower Calories: 455 Protein: 42 g Carbs: 7 g Fat: 28 g ",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1747430191.878646_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "14.50",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/15773",
+              "name": "Shrimp, Quinoa Pasta, Green Beans",
+              "description": "4 ounces shrimp, 5 ounces of quinoa pasta drizzled with olive oil, 4 ounces of steamed green beans ",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1744995200.5708485_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "12.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13188",
+              "name": "Korean Beef Bowl with Choice of Rice and Vegetable",
+              "description": "Beef marinated in sesame oil, coconut aminos, and garlic. Served with a side of creamy sriracha \nMacros with Jasmine Rice Cals: 530, Protein: 46g, Fat: 20g, Carbs: 38g\nMacros with Cauliflower Rice Cals: 412  Protein: 46g  Fat: 20g Carbs: 8g ",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/hqzocwa6wsyko7nkkx2o.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "11.25",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/43444",
+              "name": "Grilled Steak: Roasted Brussel Sprouts with Goat Cheese and Honey",
+              "description": "Cals: 364, Protein: 39g, Fat: 16g, Carbs: 19g Fiber 3oz",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "11.50",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/102739",
+              "name": "Grilled Steak Salad",
+              "description": "Spring mix topped with grilled Steak, sharp cheddar cheese, bacon bits, cucumbers and cherry tomatoes. Served with Ranch or White Balsamic Vinaigrette \nWithout Dressing Calories: 295 Protein: 27g Fat: 19g Carbs: 5g   \nWith Ranch Calories: 435 Protein: 29g Fat: 33g Carbs: 7g\nWith White Balsamic Calories: 385 Protein: 27g Fat: 26g Carbs: 11g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1769355050.7899396_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "10.50",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/107777",
+              "name": "Garden Salad",
+              "description": "Fresh spring mix served with sharp cheddar cheese, crispy bacon, cucumbers, and carrots and cherry tomatoes on the side, so you can build it your way.\nServed with your choice of Ranch, Honey Mustard, Blue Cheese, or White Balsamic Vinaigrette.\nWith Ranch\nCalories: 320 Protein: 9 g\nFat: 26 g Carbs: 7 g\n\nWith Honey Mustard\n\nCalories: 300 Protein: 9 g\nFat: 22 g Carbs: 12 g\n\nWith Blue Cheese\n\nCalories: 330 Protein: 10 g\nFat: 28 g Carbs: 6 g\n\nWith White Balsamic\n\nCalories: 270 Protein: 9 g\nFat: 19 g Carbs: 8 g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1775831782.5787373_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "8.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/106109",
+              "name": "NO BACON Grilled Chicken Salad",
+              "description": "Spring mix topped with grilled chicken, sharp cheddar cheese, cucumbers and cherry tomatoes. Served with Ranch or White Balsamic Vinaigrette     \n    \nNo dressing\nCalories: 188\nProtein: 27 g\nFat: 8 g\nCarbs: 5 g\nWith Ranch\nCalories: 325\nProtein: 28 g\nFat: 22 g\nCarbs: 7 g\nWith White Balsamic\nCalories: 275\nProtein: 26 g\nFat: 15 g\nCarbs: 8 g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1774033482.491699_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "9.50",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/43597",
+              "name": "Tomato Basil Parmesan Soup",
+              "description": "Cals: 425, Protein: 12g, Fat: 25g, Carbs: 35g Fiber 3g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/hjtsc6sjtcajcxeydjym.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "9.50",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13144",
+              "name": "Chicken Burrito Bowl with Jasmine Rice",
+              "description": "Jasmine rice, topped with salsa chicken, cheese, side of lime and sour cream\r\nCals: 448, Protein: 36g, Fat: 17g, Carbs: 36g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1727468231.104357_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "10.75",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13143",
+              "name": "Chicken Burrito Bowl with Cauliflower Rice",
+              "description": "Cauliflower rice topped with salsa chicken, cheese, side of lime and sour cream  Cals: 325, Protein: 35g, Fat: 17g, Carbs: 6g\r\nKeto/Low Carb ",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1727468210.1666257_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "10.75",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13159",
+              "name": "Dairy free chicken burrito bowl w/cauliflower rice",
+              "description": "Keto/Low Carb/Paleo/Whole 30 ",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "10.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13158",
+              "name": "Dairy Free Chicken burrito bowl w/Jasmine Rice",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "10.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Family meals (feeds 6)",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/91172",
+              "name": "Barbeque Pork Family Meal",
+              "description": "Barbeque pork, slaw, and Beans for 6",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1744994982.9517574_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "50.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/88000",
+              "name": "Family Pork Tenderloin Dinner for 6",
+              "description": "Marinated smoked pork tenderloin, mashed potatoes, and mixed green side salad. ",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1736706408.4444597_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "53.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/89744",
+              "name": "Family Steak Bite Dinner for 6",
+              "description": "Steak bites, mashed potatoes, and broccoli family meal. ",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1738728153.9037411_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "55.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/88651",
+              "name": "Family Chicken & Pesto Pasta served with choice of vegetables",
+              "description": "Feeds 6 people",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1738726708.525496_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "50.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Snacks",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13238",
+              "name": "Buffalo seasoned popcorn popped in coconut oil",
+              "description": "Calories: ~260\n\nProtein: ~4g\n\nFat: ~15.5g\n\nCarbs: ~29g\n\nFiber: ~5g",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "3.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/36165",
+              "name": "Smore's Protein Pudding",
+              "description": "Cals: 325, Protein: 35g, Fat: 9g, Carbs: 31g\r\n\r\nGreek yogurt, vanilla protein powder, dark chocolate chips, mini marshmallows, gluten free graham cracker crumbs",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/cihjcaa8hb1o9fselnw5.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "8.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/107205",
+              "name": "New product  Chocolate Coconut Truffle",
+              "description": "An indulgent yet intentional coconut cocoa truffle bar made from raw honey, shredded coconut, and rich alkalized cocoa. Crafted in small batches and kept refrigerated for a soft, fudgy texture. Gluten free, dairy free, and made with real ingredients only.\n\nCalories: 205 Fat: 20g\nCarbs: 16 Protein: 2 g\nFiber: 2 g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1772585477.6402898_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "4.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/106419",
+              "name": "Peanut Butter Yogurt Cup",
+              "description": "Macros Per Cup\n\nPer Cup \nCalories: 215 Protein: 12g\nCarbs: 18g Fat: 13g\nFiber: 2g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1770590342.8265965_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "4.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/84768",
+              "name": "Peanut Butter Protein Balls (3, 1oz balls)",
+              "description": "Cals: 244, Protein: 9g, Fat: 14g, Carbs: 26g ",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1771710369.327863_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "2.85",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/101979",
+              "name": "Chocolate chip cookie",
+              "description": "Calories 190 cal Protein 2 g\n Fat 9 g Carbs 25 g fiber 1",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1761075302.944782_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "3.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Taste and see charcuterie",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/88267",
+              "name": "Taste & See Charcuterie Box",
+              "description": "A perfect box of goodness",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1747566876.4860284_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "15.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Upsells Category",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/107602",
+              "name": "New product High Protein Ham & Swiss Egg Bites",
+              "description": "High Protein Ham & Swiss Egg Bites\nFluffy, savory egg bites packed with diced ham, Swiss cheese, and blended cottage cheese for a smooth, rich texture. Boosted with egg whites for extra protein, these are a perfect grab-and-go breakfast that reheats in seconds and keeps you full for hours.\nGluten free and designed for convenience, this 3-pack delivers clean ingredients, balanced nutrition, and bold flavor in every bite.\n3 Pack • Ready in Seconds\nCalories: 230 Protein: 26 g\nFat: 13 g Carbs: 2 g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1773752712.2512333_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "8.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/108849",
+              "name": "New product Smokehouse Ham Plate with Green Beans and herb Roasted potatoes",
+              "description": "Slow smoked ham paired with herb roasted potatoes and seasoned green beans for a simple, hearty plate packed with protein and classic comfort flavor\n\nCalories: 295 Protein: 28 g\nFat: 9 g Carbs: 23",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "10.75",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/73379",
+              "name": "Smash Snack Pack",
+              "description": "Mix of Turkey stick, Salami, hard boiled eggs, and nuts. Perfect for an afternoon energizer. \n\nCalories: 420 Protein: 33 g\nCarbohydrates: 7 g Fat: 33 g\nFiber: 2 g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1776177292.4279726_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "6.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13711",
+              "name": "Greek Yogurt, Granola, Fresh Mixed Berries",
+              "description": "Calories: 380 Protein: 27g Carbs: 61g Fat: 5g Fiber 4g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1748282541.026207_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "8.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/100134",
+              "name": "New product Smoky Brisket Power Bowl",
+              "description": "Smoky Brisket Power Bowl\nTender, slow-smoked brisket sliced lean and served with roasted sweet potatoes and garlic green beans or broccoli A high-protein twist on a BBQ favorite that fuels your week with clean comfort food.\n395 Cals | 39g Protein | 28g Carbs | 13g Fat",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "12.50",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/23700",
+              "name": "Peanut Butter Protein Bar",
+              "description": "Calories: 300 Protein: 10 g\nFat: 15 g Carbs: 32 g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1759716619.429849_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "2.85",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13248",
+              "name": "Smash Bars",
+              "description": "Dark chocolate topped with perfectly blended peanut butter, almond flour, coconut oil and raw honey \r\nCals: 300, Protein: 8g, Fat: 26g, Carbs: 14g\r\n",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1759716699.3184335_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "3.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/19380",
+              "name": "Grilled Chicken Salad",
+              "description": "Spring mix topped with grilled chicken, sharp cheddar cheese, bacon bits, cucumbers and cherry tomatoes. Served with Ranch or White Balsamic Vinaigrette \n\nwithout dressing Calories: 263 Protein: 32 Fat: 14 Carbs: 5\nwith Ranch Calories: 400 Protein: 33 g Fat: 28 g Carbs: 7 g\nwith white Balsamic Calories: 350 protein: 31 g Fat: 21 g Carbs: 8 g\n",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/yoy8w0xgufiohojw6fpb.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "9.50",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/45015",
+              "name": "Smoked Rack of Ribs",
+              "description": "Packaged and Delivered fully cooked and refrigerated. These ribs are the perfect blank canvas for you to sauce/season, warm up and serve!  ",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/gvxvbxnpet8o4k9vzctm.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "28.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13258",
+              "name": "Ranchy Popcorn",
+              "description": "Popped in coconut oil\nCal 110 carbs 21g protein 3g fat 2.5g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1722271319.5617764_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "3.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/95380",
+              "name": "Filet Mignon",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "8.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/90456",
+              "name": "Twelve Smoked Chicken Wings and drumsticks",
+              "description": "Twelve smoked chicken wings and drumsticks with dry rub seasoning. Served with a side of ranch.",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/attachment_1738688707.5254216_m__t_image.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "20.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            },
+            {
+              "@type": "MenuItem",
+              "@id": "https://www.smashmeals.com/menu/13250",
+              "name": "Mistake Bars (chocolate, peanut butter, chopped almonds)",
+              "description": "Basically a mixed up SmAsh Bar. Oops!\r\nCals: 300, Protein: 8g, Fat: 26g, Carbs: 14g",
+              "image": [
+                "https://res.cloudinary.com/hpwejnwbc/image/upload/c_limit,f_auto,h_552,w_552/v1/merchant-frontend/krcvyamkdm5mxynl59es.jpg"
+              ],
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "2.85",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.smashmeals.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does SmashMeals meal prep delivery work in Tri-Cities TN?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Order by Thursday at 11:59 PM online. We prepare your meals fresh over the weekend in our 100% gluten-free kitchen. Meals are delivered fresh Monday morning with free local delivery on orders $50+."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you ship gluten-free meals nationwide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! We ship to 240+ cities nationwide using FedEx 2-day delivery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your meals safe for celiac disease?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Every meal is prepared in our dedicated 100% gluten-free kitchen with zero cross-contamination risk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes SmashMeals different from other meal prep services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SmashMeals is the Tri-Cities' FIRST and ONLY 100% gluten-free meal prep company."
+          }
+        }
+      ]
+    }
+  ]
+}

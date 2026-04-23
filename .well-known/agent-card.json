@@ -1,0 +1,31 @@
+{
+  "name": "SmashMeals",
+  "description": "SmashMeals provides 100% gluten-free meal prep delivery, offering fresh, chef-crafted meals delivered weekly in the Tri-Cities area.",
+  "url": "https://www.smashmeals.com/a2a",
+  "provider": {
+    "organization": "SmashMeals",
+    "url": "https://www.smashmeals.com/"
+  },
+  "version": "1.0.0",
+  "protocolVersion": "1.0.0",
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "stateTransitionHistory": true
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "securitySchemes": {
+    "none": {
+      "type": "none"
+    }
+  },
+  "security": [
+    {}
+  ]
+}
