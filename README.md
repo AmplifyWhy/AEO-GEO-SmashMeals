@@ -86,10 +86,10 @@ Combined JSON-LD structured data (Organization + Menu + Products + FAQ + Potenti
 Google and Bing parse inline JSON-LD more reliably than linked files.
 
 ### `.well-known/agent-card.json`
-A2A (Agent-to-Agent) capability manifest. Describes what AI agents can do with this business programmatically. Deploy as-is — no changes needed.
+A2A (Agent-to-Agent) capability manifest — a static declaration of what the business supports. No backend required. Deploy as-is.
 
 ### `.well-known/mcp-tools.json`
-MCP (Model Context Protocol) tool catalog. Lists operations AI assistants can invoke. Deploy as-is.
+MCP (Model Context Protocol) tool catalog. These are forward-looking declarations; no live API is required to deploy this file. It signals intent to AI systems and positions the site for future agent integrations. Deploy as-is.
 
 ### `.well-known/security.txt`
 Security contact information per [RFC 9116](https://www.rfc-editor.org/rfc/rfc9116). Deploy as-is.
